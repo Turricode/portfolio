@@ -1,0 +1,21 @@
+{
+    "nodes": [
+        "python",
+        "data_science",
+        "genetic_algorithms"
+    ],
+    "links": [
+        {
+            "source": "python",
+            "target": "data_science"
+        },
+        {
+            "source": "python",
+            "target": "genetic_algorithms"
+        },
+        {
+            "source": "genetic_algorithms",
+            "target": "AI"
+        }
+    ]
+}
