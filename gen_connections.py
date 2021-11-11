@@ -16,7 +16,7 @@ def scan_file(file_path: str) -> list:
 
     for i in range(len(buffer)):
         if buffer[i] == '[':
-            tmp = ''
+            tmp: str = ''
             i+=1
             while buffer[i] != ']':
                 tmp += buffer[i]
@@ -37,8 +37,8 @@ def save_connections(path: str):
     nodes: list = []
 
     for f in all_files:
-        ff = f.replace('.doc', '').split('/')[1]
-        nodes.append(ff)
+        ff: str = f.replace('.doc', '').replace('\\', '/').split('/')[1]
+        nodes.append({'name': ff})
         
         for l in scan_file(f):
             links.append({'source': ff, 'target': l})
@@ -47,13 +47,6 @@ def save_connections(path: str):
 
     with open(path, 'w') as fp:
         json.dump(f, fp, indent=4)
-        print(f)
-
-
-
-def load_file_by_name(name: str) -> str:
-    with open(f'data/{name}.doc') as fp:
-        return fp.read()
 
 
 '''
