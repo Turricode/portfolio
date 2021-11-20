@@ -10,9 +10,12 @@ import json
 def scan_file(file_path: str) -> list:
 
     f: list = []
-
+    
     with open(file_path, 'r') as fp:
         buffer: str = fp.read()
+
+    tp: str = buffer.split('\n')[0][1:]
+    ttl: str = buffer.split('\n')[1][1:]
 
     for i in range(len(buffer)):
         if buffer[i] == '[':
@@ -24,33 +27,39 @@ def scan_file(file_path: str) -> list:
             
             f.append(tmp)
     
-    return f
+    return {'name': file_path.replace('.htm', '').replace('\\', '/').split('/')[1],'type': tp, 'title': ttl, 'links': f}
             
 
 '''
     This generates a JSON file containing all connections between files
 '''
 
-def save_connections(path: str):
-    all_files: list = glob.glob('data/*.doc')
+def gen_connections() -> dict:
+    all_files: list = glob.glob('data/*.htm')
     links: list = []
     nodes: list = []
 
     for f in all_files:
-        ff: str = f.replace('.doc', '').replace('\\', '/').split('/')[1]
-        nodes.append({'name': ff})
+        scn: dict = scan_file(f)
+        node_links: list = scn['links']
+        scn.pop('links')
         
-        for l in scan_file(f):
-            links.append({'source': ff, 'target': l})
+        nodes.append(scn)
+
+        for l in node_links:
+            links.append({'source': scn['name'], 'target': l})
 
     f: dict = {'nodes': nodes, 'links': links}
 
-    with open(path, 'w') as fp:
-        json.dump(f, fp, indent=4)
+    return f
 
+def load_node_info(name: str):
+    with open(f'data/{name}.htm', 'r') as fp:
+        data: str = fp.read()
 
+    return ''.join(data.split('\n')[2:])
 '''
     Write all test code here
 '''
 if __name__ == '__main__':
-    save_connections('test.json')
+    gen_connections()
