@@ -5,6 +5,12 @@
 <script src="{{ url_for('static', filename = 'js/graph.js')}}"></script>
 {%endblock%}
 
+{%block styles%}
+
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/brain.css')}}">
+
+{%endblock%}
+
 {%block content%}
 <dv id = 'graph' class = 'graph'></div>
        

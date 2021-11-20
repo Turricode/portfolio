@@ -48,7 +48,7 @@ def gen_connections() -> dict:
         nodes.append(scn)
 
         for l in node_links: 
-            if f'data/{l}.htm' in all_files:
+            if f'data\\{l}.htm' in all_files:
                 links.append({'source': scn['name'], 'target': l})
             else:
                 print(f'Missing file: {l}.htm')

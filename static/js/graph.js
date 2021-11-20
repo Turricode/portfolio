@@ -23,7 +23,6 @@ fetch('/api/graph_data').then(response => {
         .graphData(data)
         .nodeId('name')
         .nodeAutoColorBy('type')
-        
     });
 
 

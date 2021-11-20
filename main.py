@@ -6,8 +6,12 @@ app = Flask(__name__)
 
 
 @app.get('/')
-def index():
-    return render_template('index.html')
+def brain():
+    return render_template('brain.html')
+
+@app.get('/projects')
+def  projects():
+    return render_template('projects.html')
 
 @app.get('/api/graph_data')
 def graph_data():

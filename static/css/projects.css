@@ -1,0 +1,44 @@
+.project{
+    text-align: center;
+    padding: 30%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+
+.project h1{
+    padding-bottom: 35px;
+    font-size: 45px;
+}
+
+.project p{
+    padding-bottom: 40px;
+}
+
+.btn{
+    background-color: #00a3cc; /* This HEX is the color of the button */
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn:hover{
+    background-color: #FFF;
+    color: #00a3cc;
+    transition-duration: 0.3s;
+}
+
+img{
+    padding: 20px;
+    padding-bottom: 30px;
+    border: 0px;
+    width: 70%;
+    height: 50%;
+}
+
+.force-graph-container{
+    width: 100%;
+    display: flex;
+}

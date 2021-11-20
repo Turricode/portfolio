@@ -11,10 +11,12 @@
     
     <title>{%block title%}{%endblock%} - Porfolio</title>
 
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/base.css')}}">
+
+    {%block styles%}
+    {%endblock%}
     
     {%block scripts%}
-
     {%endblock%}
 
     
@@ -31,8 +33,8 @@
             </div>
         
             <nav>
-                <li><span><a href=""> Brain </a></span></li>
-                <li><span><a href=""> Projects </a></span></li>
+                <li><span><a href="/"> Brain </a></span></li>
+                <li><span><a href="/projects"> Projects </a></span></li>
                 <li><span><a href=""> About Me </a></span></li>
                 <li><span><a href=""> Contacts </a></span></li>
             </nav>
