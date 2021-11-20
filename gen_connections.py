@@ -34,6 +34,7 @@ def scan_file(file_path: str) -> list:
     This generates a JSON file containing all connections between files
 '''
 
+
 def gen_connections() -> dict:
     all_files: list = glob.glob('data/*.htm')
     links: list = []
@@ -46,8 +47,11 @@ def gen_connections() -> dict:
         
         nodes.append(scn)
 
-        for l in node_links:
-            links.append({'source': scn['name'], 'target': l})
+        for l in node_links: 
+            if f'data/{l}.htm' in all_files:
+                links.append({'source': scn['name'], 'target': l})
+            else:
+                print(f'Missing file: {l}.htm')
 
     f: dict = {'nodes': nodes, 'links': links}
 
