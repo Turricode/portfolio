@@ -23,9 +23,7 @@ fetch('/api/graph_data').then(response => {
         .graphData(data)
         .nodeId('name')
         .nodeAutoColorBy('type')
-        .onNodeClick((node, event) => {
-            render_text(node);
-        });
+        
     });
 
 
