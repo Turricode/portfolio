@@ -15,7 +15,7 @@
 }
 
 .btn{
-    background-color: #00a3cc; /* This HEX is the color of the button */
+    background-color: #000; /* This HEX is the color of the button */
     color: #FFF;
     padding: 10px 20px;
     border-radius: 10px;
@@ -26,7 +26,7 @@
 
 .btn:hover{
     background-color: #FFF;
-    color: #00a3cc;
+    color: #000;
     transition-duration: 0.3s;
 }
 
