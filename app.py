@@ -1,9 +1,7 @@
 from flask import Flask, render_template, jsonify, url_for
 from gen_connections import gen_connections
-import json
 
 app = Flask(__name__)
-
 
 @app.get('/')
 def brain():
