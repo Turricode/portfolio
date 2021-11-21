@@ -42,11 +42,6 @@ header .logo div{
     vertical-align: middle;
 }
 
-header .logo img{
-    height: 50px;
-    margin-top: 5px; /* Optical alignment of the logo */
-}
-
 header nav{
     float: right;
     height: 100%;
@@ -106,8 +101,17 @@ header nav a{
     .logo{
         visibility: collapse;
     }
-
-    .inner nav{
-        float: center;
+    
+    header .inner{
+        width: 100%; /* This is the inner width of the content inside of your header (80%, etc) */
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        padding-left: 2%;
     }
+
+    nav{
+        width: 100%;
+    }
+
 }
