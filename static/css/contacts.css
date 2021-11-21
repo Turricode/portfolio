@@ -1,0 +1,25 @@
+.contacts{
+    text-align: center;
+    padding: 30%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+
+.contacts h1{
+    padding-bottom: 35px;
+    font-size: 45px;
+}
+
+.contacts  p{
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.contacts ul{
+    padding-top: 17%;
+}
+
+.contacts ul li{
+    padding: 30px;
+    display: inline;
+}

@@ -1,6 +1,0 @@
-#language
-!Pure C
-
-I mostly use C for stuff related to [graphics] like [opengl]. It is definatly one
-of the languages I'm most prolific in. I tend to use it mostly in [linux] with [gcc]
-but I ocasionally use in [windows] with [mingw]

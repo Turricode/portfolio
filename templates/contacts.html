@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{%block styles%}
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/contacts.css')}}">
+{%endblock%}
+
+
+{%block content%}
+<div class="contacts">
+    <h1>HOW YOU CAN REACH ME</h1>
+
+    <ul>
+        <li>
+            <a href="mailto:torrinha.francisco@gmail.com">
+            <img src="{{url_for('static', filename = 'img/email.svg')}}" width="128" height="128">
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Turricode/Turricode">
+            <img src="{{url_for('static', filename = 'img/github.svg')}}" width="128" height="128">
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/monogenart/">
+            <img src="{{url_for('static', filename = 'img/instagram.svg')}}" width="128" height="128">
+            </a>
+        </li>
+    </ul>
+</div>
+{%endblock%}

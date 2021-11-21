@@ -1,4 +1,0 @@
-#library
-!CGLM
-
-CGLM is a pure c adaptation of the famous c++ math library glm. It does most of what you need when in comes to vectors, matrices, quads, all that kind of stuff

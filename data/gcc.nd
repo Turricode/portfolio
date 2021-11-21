@@ -1,5 +1,0 @@
-#compiler
-!GCC
-
-It's the standard GNU compiler for [linux]. It does a good job thats about all I have to say. Compilation of larger 
-projects though not as simple as some more modern languages is pretty straight forward
