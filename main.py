@@ -13,6 +13,10 @@ def brain():
 def  projects():
     return render_template('projects.html')
 
+@app.get('/aboutme')
+def about_me():
+    return render_template('about.html')
+
 @app.get('/api/graph_data')
 def graph_data():
     return jsonify(gen_connections())

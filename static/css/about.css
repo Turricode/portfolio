@@ -1,0 +1,33 @@
+.about{
+    text-align: center;
+    padding: 30%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+
+.about h1{
+    padding-bottom: 35px;
+    font-size: 45px;
+}
+
+.about h2{
+    text-align: left;
+    padding-bottom: 15px;
+    padding-top: 40px;
+}
+
+.about p{
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.about ul{
+    display: inline-block;
+    text-align: left;
+    padding-bottom: 25px;
+
+}
+.about ul li{
+    list-style-type: square;
+    padding: 15px;
+}

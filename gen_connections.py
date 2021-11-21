@@ -27,7 +27,7 @@ def scan_file(file_path: str) -> list:
             
             f.append(tmp)
     
-    return {'name': file_path.replace('.htm', '').replace('\\', '/').split('/')[1],'type': tp, 'title': ttl, 'links': f}
+    return {'name': file_path.replace('.nd', '').replace('\\', '/').split('/')[1],'type': tp, 'title': ttl, 'links': f}
             
 
 '''
@@ -36,7 +36,7 @@ def scan_file(file_path: str) -> list:
 
 
 def gen_connections() -> dict:
-    all_files: list = glob.glob('data/*.htm')
+    all_files: list = glob.glob('data/*.nd')
     links: list = []
     nodes: list = []
 
@@ -48,17 +48,18 @@ def gen_connections() -> dict:
         nodes.append(scn)
 
         for l in node_links: 
-            if f'data\\{l}.htm' in all_files:
+            print(l)
+            if f'data\\{l}.nd' in all_files:
                 links.append({'source': scn['name'], 'target': l})
             else:
-                print(f'Missing file: {l}.htm')
+                print(f'Missing file: {l}.nd')
 
     f: dict = {'nodes': nodes, 'links': links}
 
     return f
 
 def load_node_info(name: str):
-    with open(f'data/{name}.htm', 'r') as fp:
+    with open(f'data/{name}.nd', 'r') as fp:
         data: str = fp.read()
 
     return ''.join(data.split('\n')[2:])

@@ -1,0 +1,73 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+{%block styles%}
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/about.css')}}">
+{%endblock%}
+
+<div class="about">
+
+    <h1>ABOUT ME</h1>
+
+    <div class="content">
+        <h2>WHO AM I</h2>
+
+        <p>
+            I am a 20 year old Portuguese national. I have always had curiosity about systems and math and fell in love with programming as soon as I started learning.
+            <br>
+            <br>
+            Some of my hobbies outside computer science include:
+        </p>
+
+        <ul>
+            <li>Mixology</li>
+            <li>Physics</li>
+            <li>Music</li>
+        </ul>
+    </div>
+
+    <div class="content">
+
+        <h2>PROGRAMMING JOURNEY</h2>
+
+        <p>
+            I have been programming for fun for a few years now. I have learned a lot since then and I still feel like
+            there is a lot to learn. Since the beggining I have became somewhat good at:
+        </p>
+
+        <ul>
+            <li>C</li>
+            <li>Python</li>
+        </ul>
+
+        <p>
+            I have also developed interest in specific fieds in computer science. Though there are a lot of interesting areas
+            I have personally have the most fun when doing:
+        </p>
+
+        <ul>
+            <li>Game Development</li>
+            <li>Algorithm Visualization</li>
+            <li>Backend Development</li>
+            <li>Security and System Exploitation</li>
+        </ul>
+
+    </div>
+
+    <div class="content">
+        <h2>FUTURE PLANS</h2>
+
+        <p>
+            I hope to continue learning more about CS, though I might know a few programming languages, my goal is to
+            become much more competent in:
+        </p>
+        <ul>
+            <li>Rust</li>
+            <li>JS and Node</li>
+            <li>GO</li>
+        </ul>
+    </div>
+</div>
+
+{%endblock%}

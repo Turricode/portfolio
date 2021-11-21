@@ -1,4 +1,5 @@
 #compiler
-!MinGW 
+!MinGW
+
 Its basically a [pure_c] compiler for windows, More specifically it is a [gcc] "port" for windows. It's fine but when it 
 comes to library installation it can suck if you don't have a project setup method predifined
